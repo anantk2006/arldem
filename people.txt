@@ -1,0 +1,13 @@
+Northam
+Kaine
+Ebbin, Favola, Howell
+Biden
+McAuliffe
+Beyer
+
+Gillespie
+Stewart
+NULL, NULL, Purves
+Trump
+Youngkin
+Lipsman
