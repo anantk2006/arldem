@@ -251,12 +251,14 @@ for i in range(6):
 #     doc.add_picture("temp.png", height = docx.shared.Inches(4))
 #     plt.clf()
 #     doc.save(f"docs/p{p}.docx")
-prec_to_perc_2022 = {}
-for p in range(1, 55):
-    prec_to_perc_2022[p] = precinct_code_to_votes_dem[p][5]/(precinct_code_to_votes_dem[p][5]+precinct_code_to_votes_rep[p][5])
-print(prec_to_perc_2022) 
-
-
+import sys
+all_file = open("all.csv", "w")
+sys.stdout = all_file
+races = ["Governor", "US Senate", "VA Senate", "President", "Governor", "House"]
+print("PRECINCT,YEAR,RACE,PRECINCT_TURNOUT,PRECINCT_DEM,ALL_TURNOUT,ALL_DEM")
+for p in range(1,55):
+    for y in range(6):
+        print(f"{p},{y+2017},{races[y]},{prec_turnouts[p][y]},{precinct_code_to_votes_dem[p][y]/(precinct_code_to_votes_dem[p][y]+precinct_code_to_votes_rep[p][y])},{real_turnouts[y]},{perc_arl_dem[y]}")
     
 
 

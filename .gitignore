@@ -1,6 +1,8 @@
-*.png
-*.txt
-registrated
-votes
+# *.png
+# *.txt
+# registrated
+# votes
+# docs
+# *.zip
+images
 docs
-*.zip
